@@ -29,6 +29,17 @@ public class FindElementsPractice {
 
         Thread.sleep(2000);
 
+        String expected = "Thank you for signing up. Click the button below to return to the home page.";
+
+        WebElement message = driver.findElement(By.className("subheader")) ;
+
+        String actual = message.getText();//to get the tezt <h3>Text</h3>
+
+        if(expected.equals(actual)){
+            System.out.println("TEST PASSED!");
+        }else{
+            System.out.println("TEST FAILED");
+        }
         driver.quit();//to close everything
 
     }
