@@ -2,7 +2,10 @@ package com.automation.tests.day4;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 public class VerifyThatElementsIsGone {
 
@@ -25,7 +28,18 @@ public class VerifyThatElementsIsGone {
             System.out.println("Test Failed");
         }
 
+        //to find all buttons
+        //make sure that you use findElements----ending is important
+        List<WebElement> buttons = driver.findElements(By.tagName("button"));
 
+        for(WebElement eachButton : buttons){
+            //click on every button
+            eachButton.click();
+            Thread.sleep(2000);
+            //burada sayfa refresh etmicek dedi o yuzden sorun yokmus
+            //bu kismi pek anlamadim ama, zamanla oturack insaallah
+
+        }
 
         driver.quit();
     }
