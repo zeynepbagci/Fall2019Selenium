@@ -14,23 +14,7 @@ public class WarmUp1 {
     static WebDriver driver;
 
     public static void main(String[] args) {
-        /** Go to ebay
-         enter search term
-         click on search button
-         print number of results
-         go to amazon
-         Go to ebay
-         enter search term
-         click on search button
-         verify title contains search term
 
-         Go to wikipedia.org
-         enter search term `selenium webdriver`
-         click on search button
-         click on search result `Selenium (software)`
-         verify url ends with `Selenium_(software)`
-         *
-         */
 
         // ebayTest();
 
