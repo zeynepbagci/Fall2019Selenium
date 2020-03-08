@@ -39,6 +39,7 @@ public class RegistrationFrom {
 
 
         //ADD VALIDATION PART
+        //verification competed message ile
 
         driver.quit();
 
