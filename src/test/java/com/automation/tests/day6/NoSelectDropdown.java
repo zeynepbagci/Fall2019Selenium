@@ -5,9 +5,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class NoSelectDropdown {
+    //how to handle no select dropdown ?
+//click on menu click on options
 
     public static void main(String[] args) {
 
@@ -22,6 +27,12 @@ public class NoSelectDropdown {
         driver.findElement(By.id("dropdownMenuLink")).click();//to expand dropdown
 
         BrowserUtils.wait(2);
+
+        List<WebElement> allLinks = driver.findElements(By.className("dropdown-item"));
+
+        for(WebElement eachLink : allLinks){
+            System.out.println(eachLink.getText()+" : "+eachLink.getAttribute("href"));
+        }
 
         driver.findElement(By.linkText("Amazon")).click();//click on option
 
