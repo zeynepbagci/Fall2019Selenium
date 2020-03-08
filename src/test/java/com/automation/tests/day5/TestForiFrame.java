@@ -24,9 +24,13 @@ public class TestForiFrame {
         //you can specify: name, id, index or webelement of the frame
         //it's like we are jumping to another layer
         driver.switchTo().frame("mce_0_ifr");
+
         //now, this content will be visible
+        //yani frame icindeki content in id sini girerek bunu bastirdik
         WebElement textInput = driver.findElement(By.id("tinymce"));
         System.out.println(textInput.getText());
+
+
         //exit from the frame
         driver.switchTo().defaultContent();
         driver.quit();
