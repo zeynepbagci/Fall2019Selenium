@@ -17,6 +17,8 @@ public class UnitTestPractice {
         //assertion
         verifyEquals(expected,actual);
 
+
+
     }
     @Test(description= "Verify if method can reverse a string")
     public void test(){
@@ -27,6 +29,11 @@ public class UnitTestPractice {
         //to verify if expected result is equals to actual.
         //it comes from testng, junit also has this class
         //you can compare any data types here: strings, primitives, arrays, object
+
+    }
+    @Test(description = "Verify if method can reverse a String")
+    public void test2(){
+
 
     }
 
