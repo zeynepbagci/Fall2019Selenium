@@ -1,4 +1,4 @@
-package com.automation.tests.vytrack.login;
+package com.automation.tests.day9.vytrack.login;
 
 import com.automation.utilities.BrowserUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -11,7 +11,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 //STATIC IMPORT OF ALL ASSORTIONS
-import java.security.Key;
 
 import static org.testng.Assert.*;
 //Assert class cagirmadan direk assertionlari cagirmak icn zaar

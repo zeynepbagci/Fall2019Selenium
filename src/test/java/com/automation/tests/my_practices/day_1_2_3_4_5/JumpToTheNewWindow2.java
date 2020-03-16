@@ -1,4 +1,4 @@
-package com.automation.tests.my_practices;
+package com.automation.tests.my_practices.day_1_2_3_4_5;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
