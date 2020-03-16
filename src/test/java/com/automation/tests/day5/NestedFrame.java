@@ -36,6 +36,14 @@ public class NestedFrame {
 
         System.out.println(driver.findElement(By.tagName("body")).getText());
 
+        driver.switchTo().defaultContent();
+
+        driver.switchTo().frame("frame-middle");
+
+        driver.findElement(By.id("content")).getText();
+
+
+
 
         driver.quit();
 
