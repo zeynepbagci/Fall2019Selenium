@@ -1,4 +1,4 @@
-package com.automation.tests.day9.vytrack.fleet;
+package com.automation.tests.vytrack.fleet;
 
 import com.automation.utilities.BrowserUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,7 +22,7 @@ import static org.testng.Assert.*;
  *     user assertions for validation.
  */
 
-public class VehiclePageTest {
+public class VehiclesTest {
 
     private String URL = "https://qa2.vytrack.com/user/login";
     //    CREDENTIALS FOR store manager

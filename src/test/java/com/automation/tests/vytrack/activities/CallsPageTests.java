@@ -1,4 +1,4 @@
-package com.automation.tests.day9.activitiesday10;
+package com.automation.tests.vytrack.activities;
 
 import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.DriverFactory;

@@ -1,4 +1,4 @@
-package com.automation.tests.day9.vytrack.login;
+package com.automation.tests.vytrack.login;
 
 import com.automation.utilities.BrowserUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 //Assert class cagirmadan direk assertionlari cagirmak icn zaar
 
-public class LoginPageTest {
+public class LoginTest {
     private WebDriver driver;
     //https is a secured version of http protocol
     //http - it's hypertext transfer ptorocol that every single website is using nowadays
