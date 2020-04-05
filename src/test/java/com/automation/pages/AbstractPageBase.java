@@ -20,11 +20,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public abstract class AbstractPageBase {
 
     protected WebDriver driver = Driver.getDriver();
+    protected WebDriverWait wait = new WebDriverWait(driver, 25);
 
-    protected WebDriverWait wait = new WebDriverWait(driver,15);
-
-    @FindBy(css="#user-menu > a")
+    @FindBy(css = "#user-menu > a")
     protected WebElement currentUser;
+
+    public AbstractPageBase() {
+        PageFactory.initElements(driver, this);
+    }
+
 
     public String getCurrentUserName(){
         BrowserUtils.waitForPageToLoad(10);
@@ -32,28 +36,29 @@ public abstract class AbstractPageBase {
         return currentUser.getText().trim();
     }
 
-    public AbstractPageBase(){
-        PageFactory.initElements(driver,this);
-    }
-    public void navigateTo(String tabName, String moduleName){
-        String tabNameXpath = "//span[@class='title title-level-1' and contains(text(),'"+tabName+"')]";
-        String moduleXpath = "//span[@class='title title-level-2' and text()='" + moduleName + "']";
 
+    /**
+     * Method for vytrack navigation. Provide tab name and module name to navigate
+     * @param tabName, like Dashboards, Fleet or Customers
+     * @param moduleName, like Vehicles, Vehicles Odometer and Vehicles Costs
+     */
+    public void navigateTo(String tabName, String moduleName) {
+        String tabNameXpath = "//span[@class='title title-level-1' and contains(text(),'" + tabName + "')]";
+        String moduleXpath = "//span[@class='title title-level-2' and text()='" + moduleName + "']";
 
         WebElement tabElement = driver.findElement(By.xpath(tabNameXpath));
         WebElement moduleElement = driver.findElement(By.xpath(moduleXpath));
 
-
-
-
-
         Actions actions = new Actions(driver);
+
         BrowserUtils.wait(4);
+
         actions.moveToElement(tabElement).
                 pause(2000).
                 click(moduleElement).
                 build().perform();
 
+        //increase this wait rime if still failing
         BrowserUtils.wait(4);
     }
 }
