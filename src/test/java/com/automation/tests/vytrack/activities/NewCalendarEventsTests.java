@@ -145,6 +145,7 @@ public class NewCalendarEventsTests extends AbstractTestBase {
                 {"Sprint Planning", "Scrum meeting where team discussing backlog for following sprint"}
         };
     }
+
 }
 
 
